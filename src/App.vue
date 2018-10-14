@@ -1,13 +1,22 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    {{count}}
     <router-view/>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  computed: {
+    count () {
+      return this.$store.state.count
+    }
+  },
+  mounted () {
+    console.log(this.$store.state.count)
+  }
 }
 </script>
 
