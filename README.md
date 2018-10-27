@@ -2,8 +2,7 @@
 
 > vue-cli + vuex + element-ui搭建的后台
 
-###########目录结构描述
-
+``` 目录结构描述
 # ├── Readme.md                   // help
 # ├── src                         
 > │   ├── router                  // 路由配置
