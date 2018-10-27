@@ -2,23 +2,14 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import router from './router'
-import Vuex from 'vuex'
+import store from './store'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 import App from './App'
 
 Vue.config.productionTip = false
 
-Vue.use(Vuex)
-
-const store = new Vuex.Store({
-  state: {
-    count: 0
-  },
-  mutations: {
-    increment (state) {
-      state.count++
-    }
-  }
-})
+Vue.use(ElementUI)
 
 /* eslint-disable no-new */
 new Vue({
