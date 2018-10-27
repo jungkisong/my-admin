@@ -4,14 +4,15 @@
 
 ## 目录结构描述
 ``` 
-# ├── Readme.md                   // help
-# ├── src                         
-> │   ├── router                  // 路由配置
-> │   ├── store                   // vuex状态管理
-> │   ├── views                   // 页面
-> │   ├── components              // 组件
-> │   ├── App.vue
-> │   └── main.js
+├── Readme.md                   // help
+├── src                         
+│   ├── router                  // 路由配置
+│   ├── store                   // vuex状态管理
+│   ├── views                   // 页面
+│   ├── components              // 组件
+│   ├── App.vue
+│   └── main.js
+```
 
 ## Build Setup
 
