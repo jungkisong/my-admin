@@ -1,6 +1,16 @@
 # my-admin
 
-> A Vue.js project
+> vue-cli + vuex + element-ui搭建的后台
+
+###########目录结构描述
+├── Readme.md                   // help
+├── src                         
+│   ├── router                  // 路由配置
+│   ├── store                   // vuex状态管理
+│   ├── views                   // 页面
+│   ├── components              // 组件
+│   ├── App.vue
+│   └── main.js
 
 ## Build Setup
 
