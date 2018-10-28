@@ -1,5 +1,8 @@
 <template>
   <el-scrollbar class="page-component-scroll">
+    <el-row style="text-align: right; margin-bottom: 10px;">
+      <el-button @click="toAdd" type="danger">新增车评</el-button>
+    </el-row>
     <el-table
       :data="tableData"
       stripe
@@ -21,7 +24,7 @@
       <el-table-column
         label="操作">
         <template slot-scope="scope">
-          <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
+          <el-button @click="toDetail(scope.row)" type="text" size="small">查看</el-button>
           <el-button type="text" size="small">编辑</el-button>
         </template>
       </el-table-column>
@@ -103,7 +106,7 @@ export default {
         date: '2016-05-03',
         name: '王小虎',
         address: '上海市普陀区金沙江路 1516 弄'
-      },{
+      }, {
         id: 1,
         date: '2016-05-02',
         name: '王小虎',
@@ -148,23 +151,23 @@ export default {
     }
   },
   methods: {
-    handleClick (row) {
+    toAdd () {
+      this.$router.push({path: '/CarReviewAdd'})
+    },
+    toDetail (row) {
       console.log(row)
       this.$router.push({path: '/CarReviewDetail?id=' + row.id})
     },
-    handleSizeChange(val) {
-      console.log(`每页 ${val} 条`);
+    handleSizeChange (val) {
+      console.log(`每页 ${val} 条`)
     },
-    handleCurrentChange(val) {
-      console.log(`当前页: ${val}`);
+    handleCurrentChange (val) {
+      console.log(`当前页: ${val}`)
     }
   }
 }
 </script>
 
 <style scoped>
-  .page-component-scroll{
-    height: 100%;
 
-  }
 </style>
